@@ -1,8 +1,15 @@
 import React from 'react'
+import { SafeAreaView } from 'react-native'
 
 const Dashboard = () => {
   return (
-    <div>Dashboard</div>
+    <SafeAreaView>
+        <View>
+            <Text>SU</Text>
+        </View>
+
+    </SafeAreaView>
+
   )
 }
 
