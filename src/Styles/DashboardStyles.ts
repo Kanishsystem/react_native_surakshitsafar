@@ -93,11 +93,31 @@ flexDirection:"row",
   },
 
 
-
+//LiveMontoring style codes
   LiveMonitoringImage:{
-    height:400,
-    width:400
-  }
+    height:300,
+    width:400,
+    display:"flex",
+    justifyContent:"center",
+    alignItems:"center",
+    marginTop:200
+  },
+
+
+
+
+
+  searchContainer:{
+
+  },
+
+  searchInput:{
+
+    height:60,
+    width:"100%",
+    borderWidth:3,
+    borderColor:"#ced3d6"
+  },
 });
 
 export default DashboardStyles;

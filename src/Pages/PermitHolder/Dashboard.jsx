@@ -3,6 +3,7 @@ import { SafeAreaView, View, Text, Image } from "react-native";
 import { Card } from "react-native-paper";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import DashboardStyles from "../../Styles/DashboardStyles";
+import { useNavigation } from '@react-navigation/native';
 import {
   SmartSoftButton,
   SmartSoftForm,
@@ -17,6 +18,9 @@ import {
 } from "../../Services/ImageServices";
 
 const Dashboard = () => {
+
+  const navigation = useNavigation(); // Remove the parameter `navigation` here
+
   const data = [
     { Name: "User Name", Holder: "senso_permit@gmail.com" },
     { Name: "First Name", Holder: "sensom permit" },
@@ -30,13 +34,13 @@ const Dashboard = () => {
     { Name: "Drivers On Duty", image: DRIVERS_PERMIT },
     { Name: "Vehicle History", image: VEHICLE_PERMIT },
   ];
+
   return (
     <SafeAreaView style={DashboardStyles.container}>
       <View style={DashboardStyles.headerstyle}>
         <View style={DashboardStyles.HeadTexrStyle}>
           <Text style={DashboardStyles.Textstyle}>SURAKSHIT SAFAR</Text>
           <MaterialCommunityIcons
-            //   onPress={() => handleBack()}
             name="menu"
             color={"white"}
             size={25}
@@ -77,25 +81,18 @@ const Dashboard = () => {
           </Card.Content>
         </Card>
         <Text style={DashboardStyles.featureTextStyle}>Features</Text>
-
-        
-
-          <SmartSoftColumns isMultiline={true} >
+        <SmartSoftColumns isMultiline={true}>
           {FeatureData.map((data, indexes) => (
-            <SmartSoftColumn width={6}>
-          
-              <View
-                style={DashboardStyles.featureview}
-                key={indexes}
-                
-              >
+            <SmartSoftColumn width={6} key={indexes}>
+              <View style={DashboardStyles.featureview}>
                 <Card style={DashboardStyles.featureCard}>
                   <Card.Content>
                     <View style={DashboardStyles.featureCardView}>
                       <Image
                         style={DashboardStyles.MonitoringImage}
                         source={data.image}
-                      ></Image>
+                        onPress={() => navigation.navigate('live-monitoring')} // Use navigation here directly
+                      />
                       <Text style={DashboardStyles.MonitoringText}>
                         {data.Name}
                       </Text>
@@ -103,13 +100,9 @@ const Dashboard = () => {
                   </Card.Content>
                 </Card>
               </View>
-             
             </SmartSoftColumn>
-               ))}
-          </SmartSoftColumns>
-      
-
-
+          ))}
+        </SmartSoftColumns>
       </View>
     </SafeAreaView>
   );
