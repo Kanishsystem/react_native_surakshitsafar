@@ -4,9 +4,10 @@ import LoginImagePage from "./LoginImagePage";
 import { Image, SafeAreaView, StyleSheet, Text, View } from "react-native";
 import TextStyles from "../../Styles/TextStyles";
 import LoginStyles from "../../Styles/LoginStyles";
-import { MAIN, USER } from "../../Services/Imageservices";
+
 import { Card } from "react-native-paper";
 import { SmartSoftButton, SmartSoftForm } from "soft_digi_native";
+import { MAIN, USER } from "../../Services/ImageServices";
 
 
 const SigninPage = () => {

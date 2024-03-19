@@ -135,7 +135,7 @@ const DashboardStyles = StyleSheet.create({
   VolatileView:{
     display:"flex",
     flexDirection:"row",
-    justifyContent:"space-between",
+    justifyContent:"flex-start",
     
   },
   volatilecardview:{
@@ -144,6 +144,26 @@ const DashboardStyles = StyleSheet.create({
     borderColor:"#bcc1c2",
     marginTop:7
 
+  },
+
+  DriverTextstyle:{
+    display:"flex",
+    flexDirection:"row",
+
+
+  },
+
+  DriverTextAlign:{
+display:"flex",
+alignItems:"center",
+justifyContent:"center",
+color:"#0a4b43",
+fontWeight:"bold"
+  },
+  DriverButton:{
+borderWidth:3,
+borderColor:"grey",
+height:40
   },
 });
 

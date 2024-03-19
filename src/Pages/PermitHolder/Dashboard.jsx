@@ -17,28 +17,28 @@ import {
   VIOLATION_PERMIT,
 } from "../../Services/ImageServices";
 
-const Dashboard = () => {
+const Dashboard = ({Labelone,Labeltwo,imagename,imagelink,Title,Description,Header}) => {
 
   const navigation = useNavigation(); // Remove the parameter `navigation` here
 
-  const data = [
-    { Name: "User Name", Holder: "senso_permit@gmail.com" },
-    { Name: "First Name", Holder: "sensom permit" },
-    { Name: "Email", Holder: "senso_permit@gmail.com" },
-    { Name: "Contact No", Holder: "6350529929" },
-  ];
+  // const data = [
+  //   { Name: "User Name", Holder: "senso_permit@gmail.com" },
+  //   { Name: "First Name", Holder: "sensom permit" },
+  //   { Name: "Email", Holder: "senso_permit@gmail.com" },
+  //   { Name: "Contact No", Holder: "6350529929" },
+  // ];
 
-  const FeatureData = [
-    { Name: "Monitoring", image: MONITORING_PERMIT },
-    { Name: "Permit Violation", image: VIOLATION_PERMIT },
-    { Name: "Drivers On Duty", image: DRIVERS_PERMIT },
-    { Name: "Vehicle History", image: VEHICLE_PERMIT },
-  ];
+  // const FeatureData = [
+  //   { Name: "Monitoring", image: MONITORING_PERMIT },
+  //   { Name: "Permit Violation", image: VIOLATION_PERMIT },
+  //   { Name: "Drivers On Duty", image: DRIVERS_PERMIT },
+  //   { Name: "Vehicle History", image: VEHICLE_PERMIT },
+  // ];
 
   return (
     <SafeAreaView style={DashboardStyles.container}>
       <View style={DashboardStyles.headerstyle}>
-        <View style={DashboardStyles.HeadTexrStyle}>
+        <View style={DashboardStyles.HeadTextStyle}>
           <Text style={DashboardStyles.Textstyle}>SURAKSHIT SAFAR</Text>
           <MaterialCommunityIcons
             name="menu"
@@ -52,13 +52,13 @@ const Dashboard = () => {
           <Card.Content>
             <View style={DashboardStyles.buttonview}>
               <SmartSoftButton
-                label="Total Vehicle"
+                label={Labelone}
                 type="contained"
                 style={DashboardStyles.button}
                 width={6}
               />
               <SmartSoftButton
-                label="Running Vehicle"
+                label={Labeltwo}
                 type="contained"
                 style={DashboardStyles.button}
                 width={6}
@@ -69,39 +69,39 @@ const Dashboard = () => {
         <Card style={DashboardStyles.cardView}>
           <Card.Content>
             <View style={DashboardStyles.profilecardView}>
-              <Text style={DashboardStyles.profileText}>Profile</Text>
-              <Text style={DashboardStyles.profileText}>Permit Holder</Text>
+              <Text style={DashboardStyles.profileText}>{Title}</Text>
+              <Text style={DashboardStyles.profileText}>{Description}</Text>
             </View>
-            {data.map((datas, index) => (
+            {/* {data.map((datas, index) => (
               <View style={DashboardStyles.profileTextview} key={index}>
                 <Text>{datas.Name}</Text>
                 <Text>{datas.Holder}</Text>
               </View>
-            ))}
+            ))} */}
           </Card.Content>
         </Card>
-        <Text style={DashboardStyles.featureTextStyle}>Features</Text>
+        <Text style={DashboardStyles.featureTextStyle}>{Header}</Text>
         <SmartSoftColumns isMultiline={true}>
-          {FeatureData.map((data, indexes) => (
-            <SmartSoftColumn width={6} key={indexes}>
+         
+            <SmartSoftColumn width={6}>
               <View style={DashboardStyles.featureview}>
                 <Card style={DashboardStyles.featureCard}>
                   <Card.Content>
                     <View style={DashboardStyles.featureCardView}>
                       <Image
                         style={DashboardStyles.MonitoringImage}
-                        source={data.image}
-                        onPress={() => navigation.navigate('live-monitoring')} // Use navigation here directly
+                        source={imagelink}
+                        // onPress={() => navigation.navigate('live-monitoring')} // Use navigation here directly
                       />
                       <Text style={DashboardStyles.MonitoringText}>
-                        {data.Name}
+                        {imagename}
                       </Text>
                     </View>
                   </Card.Content>
                 </Card>
               </View>
             </SmartSoftColumn>
-          ))}
+        
         </SmartSoftColumns>
       </View>
     </SafeAreaView>
