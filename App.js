@@ -12,7 +12,8 @@ import TransportOfficialDashboards from './src/Pages/TransportOfficials/Transpor
 export default function App() {
   return (
     <View>
-     <TransportOfficialDashboards/>
+      <StatePoliceDashboard/>
+     {/* <TransportOfficialDashboards/> */}
   {/* <StatePoliceDashboards/> */}
    {/* <VehicleManufacturerDashboard/> */}
     </View>
