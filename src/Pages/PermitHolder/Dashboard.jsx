@@ -9,12 +9,7 @@ import {
   SmartSoftColumns,
   SmartSoftColumn,
 } from "soft_digi_native";
-import {
-  DRIVERS_PERMIT,
-  MONITORING_PERMIT,
-  VEHICLE_PERMIT,
-  VIOLATION_PERMIT,
-} from "../../Services/ImageServices";
+import { DRIVERS_PERMIT, MONITORING_PERMIT, VEHICLE_PERMIT, VIOLATION_PERMIT } from "../../Services/Imageservices";
 
 const Dashboard = () => {
   const data = [
@@ -27,7 +22,7 @@ const Dashboard = () => {
   const FeatureData = [
     { Name: "Monitoring", image: MONITORING_PERMIT },
     { Name: "Permit Violation", image: VIOLATION_PERMIT },
-    { Name: "Drivers On Duty", image: DRIVERS_PERMIT },
+    { Name: "Drivers On Duty", image: DRIVERS_PERMIT},
     { Name: "Vehicle History", image: VEHICLE_PERMIT },
   ];
   return (

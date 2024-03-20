@@ -7,7 +7,8 @@ import LoginStyles from "../../Styles/LoginStyles";
 import { MAIN, USER } from "../../Services/Imageservices";
 import { Card } from "react-native-paper";
 import { SmartSoftButton, SmartSoftForm } from "soft_digi_native";
-
+import ContainerStyles from "../../Styles/ContainerStyles";
+import SmartColumn from "soft_digi_native/dist/general/SmartColumn";
 
 const SigninPage = () => {
   return (
@@ -15,25 +16,23 @@ const SigninPage = () => {
       <SafeAreaView style={LoginStyles.safeView}>
         <View>
           <Text style={TextStyles.Title}>SURAKSHIT SAFAR</Text>
-          <Image style={styles.login} source={MAIN}></Image>
+          <SmartColumn width={12} key={"Signinpagefirstcolumn"}>
+            <Image style={styles.login} source={MAIN}></Image>
+          </SmartColumn>
         </View>
 
-        <Card>
-          {/* <LinearGradient
-            style={styles.cardlineargradient}
-          > */}
-            <Card.Content style={styles.card}>
-              <View>
-                <Image style={styles.user} source={USER}></Image>
-              </View>
+        <Card style={{ width: "95%" }}>
+          <Card.Content style={[ContainerStyles.flexVerticleBox]}>
+            <SmartColumn width={5} key={"Signinpagesecondcolumn"}>
+              <Image style={styles.user} source={USER}></Image>
+            </SmartColumn>
 
-              <SmartSoftButton
-                label="User Sign In"
-                type="text"
-                style={styles.button}
-              />
-            </Card.Content>
-          {/* </LinearGradient> */}
+            <SmartSoftButton
+              label="User Sign In"
+              type="text"
+              style={styles.button}
+            />
+          </Card.Content>
         </Card>
       </SafeAreaView>
     </>
@@ -41,27 +40,11 @@ const SigninPage = () => {
 };
 const styles = StyleSheet.create({
   login: {
-    height: 400,
-    width: 400,
+    height: 300,
   },
-  card: {
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
-    justifyContent: "center",
-    height: 250,
-    width: 380,
-  },
-
   user: {
-    height: 150,
-    width: 150,
+    height: 145,
   },
- 
-//   cardlineargradient:{
-   
-//     backgroundColor:"transparent"
-//   }
 });
 
 export default SigninPage;

@@ -4,7 +4,11 @@ import LoginStyles from "../../Styles/LoginStyles";
 import TextStyles from "../../Styles/TextStyles";
 import { MAIN } from "../../Services/Imageservices";
 import { Card } from "react-native-paper";
-import { SmartSoftButton, SmartSoftInput } from "soft_digi_native";
+import {
+  SmartSoftButton,
+  SmartSoftColumn,
+  SmartSoftInput,
+} from "soft_digi_native";
 import SmartColumn from "soft_digi_native/dist/general/SmartColumn";
 import SmartInput from "soft_digi_native/dist/forms/SmartInput";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
@@ -35,7 +39,7 @@ const UserSigninPage = () => {
         <SmartInput
           type="Text_Box"
           label="Enter Password"
-          width="100"
+
           //  placeHolder=""
         />
         <SmartSoftButton label="Sign In" type="contained" fullWidth={true} />
@@ -47,7 +51,9 @@ const UserSigninPage = () => {
       <SafeAreaView style={LoginStyles.safeView}>
         <View>
           <Text style={TextStyles.Title}>SURAKSHIT SAFAR</Text>
-          <Image style={styles.login} source={MAIN}></Image>
+          <SmartSoftColumn width={12} key={"UserSigninpagefirstcolumn"}>
+            <Image style={styles.login} source={MAIN}></Image>
+          </SmartSoftColumn>
         </View>
         <Card style={{ width: "95%" }}>
           <Card.Content
@@ -74,12 +80,10 @@ const UserSigninPage = () => {
 
 const styles = StyleSheet.create({
   login: {
-    height: 400,
-    width: 400,
+    height: 350,
   },
   selectBox: {
     height: 100,
-   
   },
   loginBox: {},
 });
