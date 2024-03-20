@@ -23,12 +23,12 @@ const Dashboard = ({Labelone,Labeltwo,imagename,imagelink,Title,Description,Head
   //   { Name: "Contact No", Holder: "6350529929" },
   // ];
 
-  // const FeatureData = [
-  //   { Name: "Monitoring", image: MONITORING_PERMIT },
-  //   { Name: "Permit Violation", image: VIOLATION_PERMIT },
-  //   { Name: "Drivers On Duty", image: DRIVERS_PERMIT },
-  //   { Name: "Vehicle History", image: VEHICLE_PERMIT },
-  // ];
+  const FeatureData = [
+    { Name: "Monitoring", image: MONITORING_PERMIT },
+    { Name: "Permit Violation", image: VIOLATION_PERMIT },
+    { Name: "Drivers On Duty", image: DRIVERS_PERMIT },
+    { Name: "Vehicle History", image: VEHICLE_PERMIT },
+  ];
 
   return (
     <SafeAreaView style={DashboardStyles.container}>
