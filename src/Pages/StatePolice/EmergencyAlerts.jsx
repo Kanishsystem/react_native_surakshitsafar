@@ -1,5 +1,5 @@
 import React from 'react'
-import HeaderComponent from '../Login/HeaderComponent'
+import HeaderComponent from '../../Components/HeaderComponent'
 
 const EmergencyAlerts = () => {
   return (

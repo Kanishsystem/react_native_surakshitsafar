@@ -8,6 +8,10 @@ import PermitViolationDetail from './src/Pages/PermitHolder/PermitViolationDetai
 import DriverOnDuty from './src/Pages/PermitHolder/DriverOnDuty';
 import EmergencyAlerts from './src/Pages/StatePolice/EmergencyAlerts';
 import DashboardComponent from './src/Pages/Login/DashboardComponent';
+import DetailCard from './src/Components/DetailCard';
+import AllDashboard from './src/Components/Dashboard';
+import HeaderDashboard from './src/Components/Dashboard';
+import HeaderComponent from './src/Components/HeaderComponent';
 
 export default function App() {
   return (
@@ -17,7 +21,11 @@ export default function App() {
     // </View>
     <NavigationContainer>
     {/* <Dashboard /> */}
-    <DashboardComponent/>
+    {/* <DashboardComponent/> */}
+    {/* <HeaderComponent/> */}
+    <AllDashboard/>
+   {/* <HeaderDashboard/> */}
+    {/* <DetailCard/> */}
     {/* <PermitViolation/> */}
     {/* <PermitViolationDetail/> */}
     {/* <DriverOnDuty/> */}
