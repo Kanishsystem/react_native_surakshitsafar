@@ -3,6 +3,9 @@ import { SafeAreaView, View } from "react-native";
 import { SmartSoftColumn } from "soft_digi_native";
 import DetailCard from "./DetailCard";
 import { Card } from "react-native-paper";
+import CardStyles from "../Styles/CardStyles";
+import HeaderComponent from "./HeaderComponent";
+import ExampleDetailSeperateCards from "./ExampleDetailSeperateCards";
 
 const ExampleDetailCard = () => {
   const data = [
@@ -24,9 +27,11 @@ const ExampleDetailCard = () => {
   ];
   return (
     <>
+    <HeaderComponent />
     <SafeAreaView style={{backgroundColor:"#e3e3e3"}}>
+    
     <View style={{margin:10,}}>
-      <Card style={{backgroundColor:"white"}} >
+      <Card style={CardStyles.cardColor} >
         {data.map((item, index) => {
           return (
             <SmartSoftColumn key={index}>

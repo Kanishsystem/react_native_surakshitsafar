@@ -2,6 +2,10 @@ import React from "react";
 import { View } from "react-native";
 import { SmartSoftColumn } from "soft_digi_native";
 import DetailSeperateCards from "./DetailSeperateCards";
+import CardStyles from "../Styles/CardStyles";
+import { Card } from "react-native-paper";
+import HeaderComponent from "./HeaderComponent";
+import ExampleDetailCard from "./ExampleDetailCard";
 
 
 const ExampleDetailSeperateCards = () => {
@@ -24,7 +28,10 @@ const ExampleDetailSeperateCards = () => {
     ];
     return (
       <>
-        <View>
+      <HeaderComponent />
+       <View style={{margin:10,}}>
+      <Card style={CardStyles.cardColor} >
+        
           {data.map((item, index) => {
             return (
               <SmartSoftColumn key={index}>
@@ -32,6 +39,7 @@ const ExampleDetailSeperateCards = () => {
               </SmartSoftColumn>
             );
           })}
+          </Card>
         </View>
       </>
     );

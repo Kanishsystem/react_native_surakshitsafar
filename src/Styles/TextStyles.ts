@@ -12,11 +12,12 @@ const TextStyles = StyleSheet.create({
   detailsTitle:{
     color:"#026930",
     fontSize:16,
-    padding:10
+    display:"flex",   
   },
   Textstyle:{
     color:"white",
     fontSize:22,
+    
   },
   profileText: {
     fontSize: 18,

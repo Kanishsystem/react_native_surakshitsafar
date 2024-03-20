@@ -21,6 +21,9 @@ const CardStyles = StyleSheet.create({
         justifyContent: "center",
         alignItems: "center",
       },
+      cardColor:{
+        backgroundColor:"white"
+      }
   });
   
   export default CardStyles;

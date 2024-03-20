@@ -7,13 +7,13 @@ import { StyleSheet, Text } from "react-native";
 
 const DetailSeperateCards = ({ title, description }) => {
   return (
-    <Card>
+    <Card style={{marginVertical:5}}>
       <Card.Content style={{}}>
         <SmartSoftColumns>
-          <SmartSoftColumn width={6}>
+          <SmartSoftColumn width={4}>
             <Text style={TextStyles.detailsTitle}>{title}</Text>
           </SmartSoftColumn>
-          <SmartSoftColumn width={6}>
+          <SmartSoftColumn width={8}>
             <Text style={[TextBox.InputBox, styles.inputDescription]}>
               {description}
             </Text>
@@ -25,6 +25,8 @@ const DetailSeperateCards = ({ title, description }) => {
 };
 const styles = StyleSheet.create({
     inputDescription: {
+      fontSize:20,
+      padding:6
       // display:"flex",
       // alignContent:"flex-start",
       // justifyContent:"flex-start",

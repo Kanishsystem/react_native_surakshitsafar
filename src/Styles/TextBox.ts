@@ -6,7 +6,7 @@ const TextBox = StyleSheet.create({
         borderWidth: 1,
         borderColor: "#ede9e8",
         backgroundColor:"#e6e6e6",
-        padding: 25,
+        minHeight:30,
         borderRadius:10,
       }
 })
