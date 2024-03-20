@@ -10,8 +10,9 @@ const TextStyles = StyleSheet.create({
     marginTop: 7,
   },
   detailsTitle:{
-    color:"green",
-    fontSize:25
+    color:"#026930",
+    fontSize:16,
+    padding:10
   }
 });
 

@@ -1,40 +1,31 @@
-import React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
-import { Card } from 'react-native-paper'
+import React from "react";
+import { SafeAreaView, StyleSheet, Text, TextBase, View } from "react-native";
+import { SmartSoftColumn, SmartSoftColumns } from "soft_digi_native";
+import TextStyles from "../Styles/TextStyles";
+import TextBox from "../Styles/TextBox";
 
-import { SmartSoftColumn, SmartSoftColumns } from 'soft_digi_native'
-import ContainerStyles from '../Styles/ContainerStyles'
-
-
-const DetailCard = ({title,description}) => {
+const DetailCard = ({ title, description }) => {
   return (
-  
+    
     <SmartSoftColumns>
-        <SmartSoftColumn width={6}>
-         <Text style={styles.cardTitle}>{title}</Text>
-        </SmartSoftColumn>      
-        <SmartSoftColumn width={6}>
-        <Text style={ styles.CurrentLocation}>{description}</Text>
-        </SmartSoftColumn>
-      </SmartSoftColumns>
-  )
-}
-const styles = StyleSheet.create({
-  cardTitle:{
-    color:"green",
-    fontSize:25
-  },
+      <SmartSoftColumn width={4}>
+        <Text style={TextStyles.detailsTitle}>{title}</Text>
+      </SmartSoftColumn>
+      <SmartSoftColumn width={8}>
+        <Text style={[TextBox.InputBox, styles.inputDescription]}>
+          {description}
+        </Text>
+      </SmartSoftColumn>
+    </SmartSoftColumns>
 
-  CurrentLocation: {
-    borderWidth: 1,
-    borderColor: "black",
-    padding: 40,
-    borderRadius:10,
-    display:"flex",
-    flexDirection:"column",
-   alignItems:"flex-start",
-   justifyContent:"center"
-  }
-   
+  );
+};
+const styles = StyleSheet.create({
+  inputDescription: {
+    // display:"flex",
+    // alignContent:"flex-start",
+    // justifyContent:"flex-start",
+    // alignContent:"center"
+  },
 });
 export default DetailCard;

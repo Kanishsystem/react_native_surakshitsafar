@@ -1,13 +1,13 @@
 import React from "react";
-import FormFetchData from "./DetailCard";
-import { View } from "react-native";
+import { SafeAreaView, View } from "react-native";
 import { SmartSoftColumn } from "soft_digi_native";
 import DetailCard from "./DetailCard";
+import { Card } from "react-native-paper";
 
 const ExampleDetailCard = () => {
   const data = [
     { title: "Vehicle No", description: "" },
-    { title: "Owner Name", description: "Senso Permit" },
+    { title: "Owner Name", description: "" },
     { title: "Device ICCID", description: "" },
     { title: "Device IMEI", description: "" },
     { title: "Alert Time", description: "" },
@@ -24,20 +24,19 @@ const ExampleDetailCard = () => {
   ];
   return (
     <>
-      <View>
+    <SafeAreaView style={{backgroundColor:"#e3e3e3"}}>
+    <View style={{margin:10,}}>
+      <Card style={{backgroundColor:"white"}} >
         {data.map((item, index) => {
           return (
-            //  <View key={index}>
             <SmartSoftColumn key={index}>
-              <DetailCard
-                title={item.title}
-                description={item.description}
-              />
+              <DetailCard title={item.title} description={item.description} />
             </SmartSoftColumn>
-            //  </View>
           );
         })}
+      </Card>
       </View>
+      </SafeAreaView>
     </>
   );
 };
