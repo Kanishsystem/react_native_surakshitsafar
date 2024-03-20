@@ -125,7 +125,7 @@ const FeaturesCard = ({ imagelink, imagename }) => {
     </SmartSoftColumns>
   );
 };
-const AllDashboard = () => {
+const PermitHolderDashboard = () => {
   return (
     <>
       <HeaderComponent Title="SURAKSHIT SAFAR"/>
@@ -139,4 +139,4 @@ const AllDashboard = () => {
   );
 };
 
-export default AllDashboard;
+export default PermitHolderDashboard;

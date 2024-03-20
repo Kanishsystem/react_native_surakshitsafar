@@ -7,25 +7,21 @@ import {
   SmartSoftColumn,
   SmartSoftColumns,
 } from "soft_digi_native";
-import HeaderComponent from "./HeaderComponent";
-import ButtonStyles from "../Styles/ButtonStyles";
-import CardStyles from "../Styles/CardStyles";
-import TextStyles from "../Styles/TextStyles";
-import ImageStyles from "../Styles/ImageStyles";
-import {
-  DRIVERS_PERMIT,
-  MONITORING_PERMIT,
-  VEHICLE_PERMIT,
-  VIOLATION_PERMIT,
-} from "../Services/Imageservices";
+import HeaderComponent from "../../Components/HeaderComponent";
+import ButtonStyles from "../../Styles/ButtonStyles";
+import CardStyles from "../../Styles/CardStyles";
+import TextStyles from "../../Styles/TextStyles";
+import ImageStyles from "../../Styles/ImageStyles";
+import {  ACCIDENT_REPORT, ALERTS, EMERGENCY_ALERT, MIS_DETAILS, MONITORING_PERMIT, OWNER_VEHICLE, RAW_DATA, SEARCHER_IMAGE, VEHICLE_DETAIL, VIOLATION_PERMIT } from "../../Services/Imageservices";
+
 
 const TwoButtons = () => {
   const data = [
     {
-      Titleone: "Total Vehicle",
-      Titletwo: "1",
-      Descriptionone: "Running Vehicle",
-      Descriptiontwo: "0",
+      Titleone: "Total Device Installed",
+      Titletwo: "7",
+      Descriptionone: "Live Device",
+      Descriptiontwo: "2",
     },
   ];
 
@@ -54,24 +50,24 @@ const ProfileCard = () => {
   const Profileitem = [
     {
       Title: "Profile",
-      Description: "Permit Holder",
+      Description: "Transport Official",
     },
 
     {
       Name: "User Name",
-      Holder: "senso_permit@gmail.com",
+      Holder: "transport_official",
     },
     {
-      Name: "First Name",
-      Holder: "sensom Permit",
-    },
+        Name: "First Name",
+        Holder: "Transport",
+      },
     {
       Name: "Email",
-      Holder: "senso_permit@gmail.com",
+      Holder: "transportofficial@sensorise.net",
     },
     {
       Name: "Contact No",
-      Holder: "6350529929",
+      Holder: "8826997773",
     },
   ];
 
@@ -98,11 +94,14 @@ const ProfileCard = () => {
 
 const FeaturesCard = ({ imagelink, imagename }) => {
   const Profileimage = [
-    { imagename: "Monitoring", imagelink: MONITORING_PERMIT },
-    { imagename: "Permit Violation", imagelink: VIOLATION_PERMIT },
-    { imagename: "Drivers On Duty", imagelink: DRIVERS_PERMIT },
-    { imagename: "Vehicle History", imagelink: VEHICLE_PERMIT },
-  ];
+    { imagename: "Live Monitoring", imagelink: MONITORING_PERMIT},
+    { imagename: "Permit Violation", imagelink:  VIOLATION_PERMIT},
+    { imagename: "Vehicle Details", imagelink: VEHICLE_DETAIL},
+    { imagename: "Accident Details", imagelink: ACCIDENT_REPORT},
+    { imagename: "MIS Reports", imagelink: MIS_DETAILS},
+    { imagename: "Alerts", imagelink: ALERTS},
+];
+
   return (
     <SmartSoftColumns isMultiline={true}>
       {Profileimage.map((Profileimagedata) => (
@@ -125,7 +124,7 @@ const FeaturesCard = ({ imagelink, imagename }) => {
     </SmartSoftColumns>
   );
 };
-const AllDashboard = () => {
+const TransportOfficialDashboards = () => {
   return (
     <>
       <HeaderComponent Title="SURAKSHIT SAFAR"/>
@@ -139,4 +138,4 @@ const AllDashboard = () => {
   );
 };
 
-export default AllDashboard;
+export default TransportOfficialDashboards;

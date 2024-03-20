@@ -2,16 +2,19 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import ExampleDetailCard from './src/Components/ExampleDetailCard';
 import ExampleDetailSeperateCards from './src/Components/ExampleDetailSeperateCards';
-import DeviceDetails from './src/Pages/VLTDManufacturer/DeviceDetails';
-import HelpDesk from './src/Pages/VLTDManufacturer/HelpDesk';
+import AllDashboard from './src/Components/Dashboard';
+import StatePoliceDashboard from './src/Pages/VehicleManufacturer/VehicleManufacturerDashboard';
+import VehicleManufacturerDashboard from './src/Pages/VehicleManufacturer/VehicleManufacturerDashboard';
+import StatePoliceDashboards from './src/Pages/StatePolice/StatePoliceDashboard';
+import VLTDDashboards from './src/Pages/VLTDManufacturer/VLTDDashboard';
+import TransportOfficialDashboards from './src/Pages/TransportOfficials/TransportOfficialDashboard';
 
 export default function App() {
   return (
     <View>
-    <ExampleDetailCard />
-    {/* <ExampleDetailSeperateCards /> */}
-    {/* <DeviceDetails /> */}
-    {/* <HelpDesk /> */}
+     <TransportOfficialDashboards/>
+  {/* <StatePoliceDashboards/> */}
+   {/* <VehicleManufacturerDashboard/> */}
     </View>
   );
 }

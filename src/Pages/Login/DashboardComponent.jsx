@@ -1,5 +1,5 @@
 import React from "react";
-import Dashboard from "../PermitHolder/Dashboard";
+import Dashboard from "../PermitHolder/PermitHolderDashboard";
 import { MONITORING_PERMIT } from "../../Services/Imageservices";
 
 const DashboardComponent = () => {

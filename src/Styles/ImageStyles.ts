@@ -6,7 +6,7 @@ const ImageStyles = StyleSheet.create({
         width: 70,
         justifyContent: "center",
         alignItems: "center",
-        marginTop: 10,
+        marginTop: 20,
       },
   });
   

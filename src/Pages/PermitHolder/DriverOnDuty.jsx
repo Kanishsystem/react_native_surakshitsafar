@@ -10,7 +10,7 @@ import {
   SmartSoftColumns,
   SmartSoftColumn,
 } from "soft_digi_native";
-import {} from "../../Services/ImageServices";
+import {} from "../../Services/Imageservices";
 import SmartInput from "soft_digi_native/dist/forms/SmartInput";
 
 const DriverOnDuty = () => {
