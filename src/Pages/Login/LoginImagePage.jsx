@@ -20,7 +20,6 @@ const LoginImagePage = () => {
 const styles = StyleSheet.create({
   login: {
     height: 350,
-    width: 350,
   },
 });
 

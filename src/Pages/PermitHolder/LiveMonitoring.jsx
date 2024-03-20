@@ -9,13 +9,8 @@ import {
   SmartSoftColumns,
   SmartSoftColumn,
 } from "soft_digi_native";
-import {
-  DRIVERS_PERMIT,
-  MONITORING_PERMIT,
-  NO_DATA_FOUND,
-  VEHICLE_PERMIT,
-  VIOLATION_PERMIT,
-} from "../../Services/ImageServices";
+import { NO_DATA_FOUND } from "../../Services/Imageservices";
+
 
 const LiveMonitoring = () => {
   return (
