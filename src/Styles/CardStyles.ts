@@ -10,7 +10,7 @@ const CardStyles = StyleSheet.create({
         justifyContent: "space-between",
       },
       featureCard: {
-        height: 160,
+        height: 200,
         width: "95%",
         marginTop: 10,
         borderBottomWidth: 6,

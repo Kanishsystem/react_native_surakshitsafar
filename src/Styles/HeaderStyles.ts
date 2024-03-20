@@ -9,7 +9,7 @@ const HeaderStyles = StyleSheet.create({
       },
       Textstyle: {
         color: "white",
-        fontSize: 30,
+        fontSize: 28,
         marginTop:38,
         padding:20
       },

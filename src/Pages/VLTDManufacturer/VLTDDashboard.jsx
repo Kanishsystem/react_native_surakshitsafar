@@ -7,25 +7,21 @@ import {
   SmartSoftColumn,
   SmartSoftColumns,
 } from "soft_digi_native";
-import HeaderComponent from "./HeaderComponent";
-import ButtonStyles from "../Styles/ButtonStyles";
-import CardStyles from "../Styles/CardStyles";
-import TextStyles from "../Styles/TextStyles";
-import ImageStyles from "../Styles/ImageStyles";
-import {
-  DRIVERS_PERMIT,
-  MONITORING_PERMIT,
-  VEHICLE_PERMIT,
-  VIOLATION_PERMIT,
-} from "../Services/Imageservices";
+import HeaderComponent from "../../Components/HeaderComponent";
+import ButtonStyles from "../../Styles/ButtonStyles";
+import CardStyles from "../../Styles/CardStyles";
+import TextStyles from "../../Styles/TextStyles";
+import ImageStyles from "../../Styles/ImageStyles";
+import {  EMERGENCY_ALERT, MIS_DETAILS, MONITORING_PERMIT, OWNER_VEHICLE, RAW_DATA, SEARCHER_IMAGE, VEHICLE_DETAIL } from "../../Services/Imageservices";
+
 
 const TwoButtons = () => {
   const data = [
     {
-      Titleone: "Total Vehicle",
-      Titletwo: "1",
-      Descriptionone: "Running Vehicle",
-      Descriptiontwo: "0",
+      Titleone: "Activated Device",
+      Titletwo: "4",
+      Descriptionone: "Live Device",
+      Descriptiontwo: "2",
     },
   ];
 
@@ -54,24 +50,24 @@ const ProfileCard = () => {
   const Profileitem = [
     {
       Title: "Profile",
-      Description: "Permit Holder",
+      Description: "Device Manufacturer",
     },
 
     {
       Name: "User Name",
-      Holder: "senso_permit@gmail.com",
+      Holder: "sensom",
     },
     {
-      Name: "First Name",
-      Holder: "sensom Permit",
-    },
+        Name: "First Name",
+        Holder: "sensom",
+      },
     {
       Name: "Email",
-      Holder: "senso_permit@gmail.com",
+      Holder: "brij.kumar@sensorise.net",
     },
     {
       Name: "Contact No",
-      Holder: "6350529929",
+      Holder: "8826997771",
     },
   ];
 
@@ -98,10 +94,10 @@ const ProfileCard = () => {
 
 const FeaturesCard = ({ imagelink, imagename }) => {
   const Profileimage = [
-    { imagename: "Monitoring", imagelink: MONITORING_PERMIT },
-    { imagename: "Permit Violation", imagelink: VIOLATION_PERMIT },
-    { imagename: "Drivers On Duty", imagelink: DRIVERS_PERMIT },
-    { imagename: "Vehicle History", imagelink: VEHICLE_PERMIT },
+    { imagename: "Live Monitoring", imagelink: MONITORING_PERMIT},
+    { imagename: "Device Report", imagelink:  VEHICLE_DETAIL},
+    { imagename: "Raw Data", imagelink: RAW_DATA},
+    { imagename: "MIS Details", imagelink: MIS_DETAILS},
   ];
   return (
     <SmartSoftColumns isMultiline={true}>
@@ -125,7 +121,7 @@ const FeaturesCard = ({ imagelink, imagename }) => {
     </SmartSoftColumns>
   );
 };
-const AllDashboard = () => {
+const VLTDDashboards = () => {
   return (
     <>
       <HeaderComponent Title="SURAKSHIT SAFAR"/>
@@ -139,4 +135,4 @@ const AllDashboard = () => {
   );
 };
 
-export default AllDashboard;
+export default VLTDDashboards;

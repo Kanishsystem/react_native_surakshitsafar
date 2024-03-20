@@ -21,13 +21,14 @@ const TextStyles = StyleSheet.create({
   profileText: {
     fontSize: 18,
     color: "#0a4b43",
+    fontWeight:"bold"
   },
   profileTextview: {
     flexDirection: "row",
     justifyContent: "space-between",
   },
   FeatureImageText: {
-    marginTop: 10,
+    marginTop: 35,
   },
   featureHeaderText: {
     color: "#0a4b43",
@@ -35,6 +36,9 @@ const TextStyles = StyleSheet.create({
     marginTop: 10,
     fontSize: 17,
   },
+  fontcolor:{
+    color:"white"
+  }
 });
 
 export default TextStyles;

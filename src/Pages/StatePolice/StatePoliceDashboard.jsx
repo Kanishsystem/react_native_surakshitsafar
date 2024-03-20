@@ -7,25 +7,21 @@ import {
   SmartSoftColumn,
   SmartSoftColumns,
 } from "soft_digi_native";
-import HeaderComponent from "./HeaderComponent";
-import ButtonStyles from "../Styles/ButtonStyles";
-import CardStyles from "../Styles/CardStyles";
-import TextStyles from "../Styles/TextStyles";
-import ImageStyles from "../Styles/ImageStyles";
-import {
-  DRIVERS_PERMIT,
-  MONITORING_PERMIT,
-  VEHICLE_PERMIT,
-  VIOLATION_PERMIT,
-} from "../Services/Imageservices";
+import HeaderComponent from "../../Components/HeaderComponent";
+import ButtonStyles from "../../Styles/ButtonStyles";
+import CardStyles from "../../Styles/CardStyles";
+import TextStyles from "../../Styles/TextStyles";
+import ImageStyles from "../../Styles/ImageStyles";
+import {  EMERGENCY_ALERT, MONITORING_PERMIT, OWNER_VEHICLE, SEARCHER_IMAGE } from "../../Services/Imageservices";
+
 
 const TwoButtons = () => {
   const data = [
     {
-      Titleone: "Total Vehicle",
-      Titletwo: "1",
-      Descriptionone: "Running Vehicle",
-      Descriptiontwo: "0",
+      Titleone: "Total Emergency Alerts",
+      Titletwo: "**********",
+      Descriptionone: "Resolve Alerts",
+      Descriptiontwo: "**********",
     },
   ];
 
@@ -54,24 +50,20 @@ const ProfileCard = () => {
   const Profileitem = [
     {
       Title: "Profile",
-      Description: "Permit Holder",
+      Description: "State Police",
     },
 
     {
-      Name: "User Name",
-      Holder: "senso_permit@gmail.com",
-    },
-    {
-      Name: "First Name",
-      Holder: "sensom Permit",
+      Name: "Station NAme",
+      Holder: "StatePolice ",
     },
     {
       Name: "Email",
-      Holder: "senso_permit@gmail.com",
+      Holder: "statepolice12@gmail.com",
     },
     {
       Name: "Contact No",
-      Holder: "6350529929",
+      Holder: "9876543210",
     },
   ];
 
@@ -98,10 +90,10 @@ const ProfileCard = () => {
 
 const FeaturesCard = ({ imagelink, imagename }) => {
   const Profileimage = [
-    { imagename: "Monitoring", imagelink: MONITORING_PERMIT },
-    { imagename: "Permit Violation", imagelink: VIOLATION_PERMIT },
-    { imagename: "Drivers On Duty", imagelink: DRIVERS_PERMIT },
-    { imagename: "Vehicle History", imagelink: VEHICLE_PERMIT },
+    { imagename: "Live Tracking", imagelink: MONITORING_PERMIT },
+    { imagename: "Emergency Alert", imagelink:  EMERGENCY_ALERT},
+    { imagename: "Vehicle Owner Details", imagelink: OWNER_VEHICLE },
+    { imagename: "Update Investigation", imagelink: SEARCHER_IMAGE },
   ];
   return (
     <SmartSoftColumns isMultiline={true}>
@@ -125,7 +117,7 @@ const FeaturesCard = ({ imagelink, imagename }) => {
     </SmartSoftColumns>
   );
 };
-const AllDashboard = () => {
+const StatePoliceDashboards = () => {
   return (
     <>
       <HeaderComponent Title="SURAKSHIT SAFAR"/>
@@ -139,4 +131,4 @@ const AllDashboard = () => {
   );
 };
 
-export default AllDashboard;
+export default StatePoliceDashboards;
