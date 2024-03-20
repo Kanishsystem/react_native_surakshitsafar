@@ -2,7 +2,8 @@ import React from "react";
 import { Image, SafeAreaView, StyleSheet, Text, View } from "react-native";
 import LoginStyles from "../../Styles/LoginStyles";
 import TextStyles from "../../Styles/TextStyles";
-import { MAIN } from "../../Services/Imageservices";
+import { MAIN } from "../../Services/ImageServices";
+
 
 const LoginImagePage = () => {
   return (

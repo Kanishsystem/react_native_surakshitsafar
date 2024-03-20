@@ -2,7 +2,7 @@ import React from "react";
 import { Image, SafeAreaView, StyleSheet, Text, View } from "react-native";
 import LoginStyles from "../../Styles/LoginStyles";
 import TextStyles from "../../Styles/TextStyles";
-import { MAIN } from "../../Services/Imageservices";
+
 import { Card } from "react-native-paper";
 import {
   SmartSoftButton,
@@ -13,6 +13,7 @@ import SmartColumn from "soft_digi_native/dist/general/SmartColumn";
 import SmartInput from "soft_digi_native/dist/forms/SmartInput";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import ContainerStyles from "../../Styles/ContainerStyles";
+import { MAIN } from "../../Services/ImageServices";
 
 const UserSigninPage = () => {
   const loginFormSelectBox = () => {
