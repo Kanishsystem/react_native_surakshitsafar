@@ -39,6 +39,9 @@ const TextStyles = StyleSheet.create({
   },
   fontcolor:{
     color:"white"
+  },
+  bluecard:{
+    color:"black",
   }
 });
 

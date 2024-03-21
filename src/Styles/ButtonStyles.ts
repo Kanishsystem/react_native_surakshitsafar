@@ -15,6 +15,17 @@ const ButtonStyles = StyleSheet.create({
         flexDirection: "row",
         justifyContent: "space-around",
       },
+      bluebutton:{
+        backgroundColor:"#ceedec",
+        borderWidth:2,
+        borderColor:"#9dedea",
+        height: 60,
+        alignItems: "center",
+        width: 170,
+        borderRadius:15,
+        justifyContent:"center",
+
+      }
   });
   
   export default ButtonStyles;
