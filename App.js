@@ -8,11 +8,13 @@ import VehicleManufacturerDashboard from './src/Pages/VehicleManufacturer/Vehicl
 import StatePoliceDashboards from './src/Pages/StatePolice/StatePoliceDashboard';
 import VLTDDashboards from './src/Pages/VLTDManufacturer/VLTDDashboard';
 import TransportOfficialDashboards from './src/Pages/TransportOfficials/TransportOfficialDashboard';
+import ReportCard from './src/Components/ReportCard';
 
 export default function App() {
   return (
     <View>
-      <StatePoliceDashboard/>
+      <ReportCard/>
+      {/* <StatePoliceDashboard/> */}
      {/* <TransportOfficialDashboards/> */}
   {/* <StatePoliceDashboards/> */}
    {/* <VehicleManufacturerDashboard/> */}

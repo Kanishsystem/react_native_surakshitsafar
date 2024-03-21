@@ -13,7 +13,7 @@ import SmartColumn from "soft_digi_native/dist/general/SmartColumn";
 import SmartInput from "soft_digi_native/dist/forms/SmartInput";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import ContainerStyles from "../../Styles/ContainerStyles";
-import { MAIN } from "../../Services/ImageServices";
+import { MAIN } from "../../Services/Imageservices";
 
 const UserSigninPage = () => {
   const loginFormSelectBox = () => {
